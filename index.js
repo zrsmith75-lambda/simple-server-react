@@ -1,6 +1,8 @@
 const express = require("express");
+const cors = require("cors");
 
 const server = express();
+server.use(cors());
 server.use(express.json());
 
 let books = [
@@ -18,6 +20,11 @@ let books = [
     title: "Vader is so cool",
     year: 1981,
     id: 3
+  },
+  {
+    title: "The best Vader is yet to come",
+    year: 2020,
+    id: 4
   }
 ];
 
