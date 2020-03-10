@@ -2,7 +2,9 @@ import React from "react";
 const BooksForm = props => {
   return (
     <div>
-      <p>Books Form</p>
+      <button onClick={props.getBooks}>
+        Get the best books ever about {props.name}!
+      </button>
     </div>
   );
 };

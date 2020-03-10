@@ -1,8 +1,14 @@
 import React from "react";
+import cuid from "cuid";
 const BooksDisplay = props => {
   return (
     <div>
-      <p>Books Display</p>
+      {props.books.map(book => (
+        <div key={cuid()}>
+          <h3>{book.title}</h3>
+          <p>Year: {book.year}</p>
+        </div>
+      ))}
     </div>
   );
 };
